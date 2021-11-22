@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto&display=swap');
+:root {
+    --background: rgba(13, 13, 103, 0.85)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.right{
+    grid-column: 8;
+
+}
+
+.menu-toggle .bar {
+    background-color: #FFFFFF;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+
+nav {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height:4rem;
+    background: var(--background);
+}
+
+#navbar-logo {
+
+    color: #FFFFFF;
+    justify-self: start;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem ;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-menu{
+    display: grid;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    grid-template-columns: repeat(8,auto) ;
+}
+
+nav li {
+
+    margin: 0;
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+
+}
+
+nav a {
+    opacity: 1;
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: lightgrey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+
+    color: lightgrey;
+}
+
+nav li a:hover::before {
+    transform: scale(1, 1);
+}
+.right{
+    grid-column: 8;
+}
+@media screen and (max-width: 930px) {
+    .nav-container {
+        position: relative;
+    }
+    .right{
+        grid-column: unset;
+    }
+    .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background: var(--background);
+        position: absolute;
+        width: 100%;
+        top:4rem;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+
+
+    }
+    .nav-menu.active{
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    #mobile-menu{
+        position: absolute;
+        top:20%;
+        right: 5%;
+
+    }
+    .menu-toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    .menu-toggle:hover{
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+

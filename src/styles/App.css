@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto&display=swap');
+body{
+    font-family: 'Road Rage', cursive;
+    margin: 0;
+}
+#root{
+    background-image: url("https://wallpaperaccess.com/full/336500.jpg") ;
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+
+}
+.test {
+    color: #FFFFFF;
+
+
+}
