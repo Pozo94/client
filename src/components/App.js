@@ -12,20 +12,21 @@ import Header from "./Header";
 const App = () => {
     return (
 
-        <div className='content'>
+        <div>
 
             <BrowserRouter>
 
                 <Header/>
-                <Routes>
-                    <Route path="/" exact element={<StreamList/>}/>
-                    <Route path="/streams/new" element={<StreamCreate/>}/>
-                    <Route path="/streams/delete" element={<StreamDelete/>}/>
-                    <Route path="/streams/edit" element={<StreamEdit/>}/>
-                    <Route path="/streams/show" element={<StreamShow/>}/>
+                <div className='content'>
+                    <Routes>
+                        <Route path="/" exact element={<StreamList/>}/>
+                        <Route path="/streams/new" element={<StreamCreate/>}/>
+                        <Route path="/streams/delete" element={<StreamDelete/>}/>
+                        <Route path="/streams/edit" element={<StreamEdit/>}/>
+                        <Route path="/streams/show" element={<StreamShow/>}/>
 
-                </Routes>
-
+                    </Routes>
+                </div>
 
             </BrowserRouter>
 

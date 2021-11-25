@@ -2,18 +2,27 @@
 body{
     font-family: 'Road Rage', cursive;
     margin: 0;
+
+
 }
 #root{
     background-image: url("https://wallpaperaccess.com/full/336500.jpg") ;
     background-color: #333;
     background-blend-mode: multiply;
     background-size: cover;
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: grid;
+    min-height: 100vh;
+
 
 }
 .test {
     color: #FFFFFF;
 
 
+}
+.content{
+    padding-top: 80px;
+    padding-bottom: 4rem;
 }

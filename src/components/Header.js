@@ -10,9 +10,9 @@ const Header = () => {
 
         <div className='nav-container'>
             <nav>
-                <h1 id='navbar-logo'  >
+                <Link to='/' id='navbar-logo'  >
                 Streamer
-                </h1>
+                </Link>
                 <div className='menu-toggle' id='mobile-menu' onClick={() => {
                     document.querySelector('#mobile-menu').classList.toggle('is-active');
                     document.querySelector('.nav-menu').classList.toggle('active');
