@@ -3,6 +3,7 @@
     color: #FFFFFF;
     --background: rgba(13, 13, 103, 0.85) ;
 }
+
 .h1{
     font-size: 2em;
 }
@@ -57,16 +58,21 @@
 
 .btn{
     color: var(--background);
-    width: 5rem;
-    height: 2rem;
-    padding: 5px;
+    padding: 5px 10px;
     margin: 2px;
+    text-decoration: none;
+    background: #FFFFFF;
+    border-radius: 0.3rem;
+    transition-duration: 0.4s;
+
+}
+.edit{
 
 }
 .btn.danger:hover{
     background: #ec0f0f;
 }
-.btn:hover{
+.btn.edit:hover{
     background: #59b000;
 }
 .btn.create:hover{

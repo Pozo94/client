@@ -9,21 +9,23 @@ import StreamList from "./streams/StreamList";
 import StreamShow from "./streams/StreamShow";
 import Header from "./Header";
 
+
 const App = () => {
+
     return (
 
         <div>
 
-            <BrowserRouter>
+            <BrowserRouter >
 
                 <Header/>
                 <div className='content'>
                     <Routes>
                         <Route path="/" exact element={<StreamList/>}/>
-                        <Route path="/streams/new" element={<StreamCreate/>}/>
-                        <Route path="/streams/delete" element={<StreamDelete/>}/>
-                        <Route path="/streams/edit" element={<StreamEdit/>}/>
-                        <Route path="/streams/show" element={<StreamShow/>}/>
+                        <Route path="/streams/new" exact element={<StreamCreate/>}/>
+                        <Route path="/streams/delete/:id" exact element={<StreamDelete/>}/>
+                        <Route path="/streams/edit/:id" exact render={props=><StreamEdit{ ...props}/>}/>
+                        <Route path="/streams/show" exact element={<StreamShow/>}/>
 
                     </Routes>
                 </div>

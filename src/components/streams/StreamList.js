@@ -5,8 +5,10 @@ import {fetchStreams} from "../../actions";
 import '../../styles/List.css'
 import {Link} from "react-router-dom";
 
+
 class StreamList extends Component {
     componentDidMount() {
+        console.log(this.props)
         this.props.fetchStreams();
 
     }
@@ -23,8 +25,8 @@ class StreamList extends Component {
     renderAdmin(stream) {
         if (stream.userId === this.props.currentUserId) {
             return <span className='buttons'>
-                <button className='btn'>Edit</button>
-                <button className='btn danger'>Delete</button>
+                <Link to={`/streams/edit/${stream.id}`} className='btn edit'>Edit</Link>
+                <Link to={`/streams/delete/${stream.id}`} className='btn danger'>Delete</Link>
             </span>
         }
     }

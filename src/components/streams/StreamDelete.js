@@ -1,10 +1,17 @@
 import React from 'react';
+import {useParams,useNavigate,useLocation} from "react-router-dom";
+import Modal from "../Modal";
 
 
-const    StreamDelete= ()=> {
+
+const    StreamDelete= (props)=> {
+    const {id} =useParams();
+    const navigate=useNavigate();
     return(
+
         <div className='test'>
-            DELETE
+            {id}
+        <Modal/>
         </div>)
 
 }

@@ -28,18 +28,7 @@ const Header = () => {
                     <li>
                         <Link to="/streams/new">Create Stream</Link>
                     </li>
-                    <li>
-                        <Link to="/streams/edit">Edit Stream</Link>
-                    </li>
-                    <li>
-                        <Link to="/streams/delete">Delete Stream</Link>
-                    </li>
-                    <li>
-                        <Link to="/">List Streams</Link>
-                    </li>
-                    <li>
-                        <Link to="/streams/show">Show Stream</Link>
-                    </li>
+
 
                     <li className='right' >
                         <GoogleAuth/>

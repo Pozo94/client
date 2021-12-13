@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
-import {Field,reduxForm} from "redux-form";
+import {Field, Form, reduxForm} from "redux-form";
 import {connect} from "react-redux";
+import {useNavigate, useLocation, Navigate} from 'react-router-dom'
 import {createStream} from "../../actions";
 import '../../styles/Form.css'
+
 class  StreamCreate extends Component{
+
     renderError({error,touched}){
         if(touched&&error){
             return<div className='error'>{error}</div>
@@ -39,11 +42,11 @@ class  StreamCreate extends Component{
     render() {
     return(
         <div className='stream-wrap'>
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)} className='form'>
+            <Form onSubmit={this.props.handleSubmit(this.onSubmit)}   className='form'>
                 <Field name="title" component={this.renderInput} label="Enter Title"/>
                 <Field name="description" component={this.renderTextForm} label="Enter Description"/>
-                <button  className="create-button">Create Stream</button>
-            </form>
+                <button onClick={this.toDashboard}  className="create-button">Create Stream</button>
+            </Form>
         </div>
    )
 
